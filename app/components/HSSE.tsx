@@ -20,7 +20,7 @@ export default function HSSE() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
           className="text-4xl md:text-5xl font-bold text-center mb-16"
         >
           {d.title}
@@ -42,7 +42,7 @@ export default function HSSE() {
           <motion.div
             variants={{
               hidden: { opacity: 0, y: 30 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.25, 1, 0.5, 1] } }
+              visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeInOut" } }
             }}
             whileHover={{ y: -8, scale: 1.02 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
@@ -68,7 +68,7 @@ export default function HSSE() {
           <motion.div
             variants={{
               hidden: { opacity: 0, y: 30 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.25, 1, 0.5, 1] } }
+              visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeInOut" } }
             }}
             whileHover={{ y: -8, scale: 1.02 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
@@ -101,7 +101,7 @@ export default function HSSE() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.4, ease: [0.25, 1, 0.5, 1] }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
             onClick={() => setSelected(null)}
           >
             <motion.div

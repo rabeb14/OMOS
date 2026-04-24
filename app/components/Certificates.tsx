@@ -49,7 +49,7 @@ export default function Certificates() {
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
         className="text-4xl font-bold mb-16 text-blue-900 dark:text-white"
       >
         {d.title}
@@ -60,7 +60,7 @@ export default function Certificates() {
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 1, 0.5, 1] }}
+        transition={{ duration: 0.8, delay: 0.2, ease: "easeInOut" }}
         className="relative flex justify-center items-center"
       >
         {/* Image principale agrandie */}
@@ -116,9 +116,8 @@ export default function Certificates() {
               const newDirection = i > imageIndex ? 1 : -1;
               setPage([page + (i - imageIndex), newDirection]);
             }}
-            className={`w-2.5 h-2.5 rounded-full cursor-pointer transition-all duration-300 ease-[cubic-bezier(0.25,1,0.5,1)] ${
-              i === imageIndex ? "bg-blue-900 dark:bg-white scale-125" : "bg-gray-300 dark:bg-gray-600 hover:bg-gray-400"
-            }`}
+            className={`w-2.5 h-2.5 rounded-full cursor-pointer transition-all duration-300 ease-[cubic-bezier(0.25,1,0.5,1)] ${i === imageIndex ? "bg-blue-900 dark:bg-white scale-125" : "bg-gray-300 dark:bg-gray-600 hover:bg-gray-400"
+              }`}
           />
         ))}
       </div>

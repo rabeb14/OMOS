@@ -17,7 +17,7 @@ export default function Businesses() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
           className="text-4xl font-bold text-center mb-16"
         >
           {d.title}
@@ -32,11 +32,11 @@ export default function Businesses() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1], delay: index * 0.1 }}
+              transition={{ duration: 0.8, ease: "easeInOut", delay: index * 0.1 }}
               whileHover={{ y: -8, scale: 1.02 }}
               className="group relative p-8 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:border-white/30 hover:bg-white/10 transition-colors duration-300 shadow-lg"
             >
-              
+
               {/* Title */}
               <h3 className="text-lg font-semibold mb-4 leading-tight">
                 {item.title}

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { useLanguage } from "../LanguageContext";
 import { dict } from "../dictionaries";
 
@@ -8,7 +8,7 @@ export default function PhilosophyVision() {
   const { lang } = useLanguage();
   const d = dict[lang as keyof typeof dict].philosophy;
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -16,9 +16,9 @@ export default function PhilosophyVision() {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.25, 1, 0.5, 1] } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeInOut" } }
   };
 
   return (
@@ -30,7 +30,7 @@ export default function PhilosophyVision() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
           className="text-4xl font-bold text-center mb-12 text-blue-900 dark:text-white"
         >
           {d.title}
@@ -41,7 +41,7 @@ export default function PhilosophyVision() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 1, 0.5, 1] }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeInOut" }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
@@ -93,7 +93,7 @@ export default function PhilosophyVision() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
           className="text-3xl font-bold text-center mb-10 text-blue-900 dark:text-white"
         >
           {d.pillarsTitle}

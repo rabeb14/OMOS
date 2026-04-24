@@ -43,7 +43,7 @@ export default function References() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
           className="text-4xl md:text-5xl font-bold text-center mb-20 text-blue-900 dark:text-white"
         >
           {d.title}
@@ -51,9 +51,9 @@ export default function References() {
 
         {/* Interactive Showcase Container */}
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 mt-12">
-          
+
           {/* Left Side: Scrollable Client List */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -64,11 +64,10 @@ export default function References() {
               <button
                 key={index}
                 onClick={() => setActiveIndex(index)}
-                className={`text-left px-5 py-4 rounded-2xl transition-all duration-300 border flex items-center justify-between group ${
-                  activeIndex === index 
-                    ? "bg-blue-600 border-blue-600 shadow-lg shadow-blue-500/30 transform scale-[1.02]" 
-                    : "bg-white dark:bg-blue-900/30 border-gray-100 dark:border-blue-800/50 hover:bg-blue-50 dark:hover:bg-blue-800/80 hover:border-blue-200 dark:hover:border-blue-700"
-                }`}
+                className={`text-left px-5 py-4 rounded-2xl transition-all duration-300 border flex items-center justify-between group ${activeIndex === index
+                  ? "bg-blue-600 border-blue-600 shadow-lg shadow-blue-500/30 transform scale-[1.02]"
+                  : "bg-white dark:bg-blue-900/30 border-gray-100 dark:border-blue-800/50 hover:bg-blue-50 dark:hover:bg-blue-800/80 hover:border-blue-200 dark:hover:border-blue-700"
+                  }`}
               >
                 <div className="flex items-center gap-4">
                   <span className={`text-sm font-mono font-bold ${activeIndex === index ? "text-blue-200" : "text-gray-400 dark:text-blue-500"}`}>
@@ -87,7 +86,7 @@ export default function References() {
           </motion.div>
 
           {/* Right Side: Dynamic Content Display */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -133,7 +132,8 @@ export default function References() {
       </div>
 
       {/* Custom Scrollbar Styles */}
-      <style dangerouslySetInnerHTML={{__html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         .ref-scrollbar::-webkit-scrollbar {
           width: 6px;
         }

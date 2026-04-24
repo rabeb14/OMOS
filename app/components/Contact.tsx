@@ -17,7 +17,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
           className="text-center mb-16"
         >
           <h1 className="text-5xl font-bold mb-4 tracking-tight text-blue-900 dark:text-white">
@@ -36,7 +36,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 1, 0.5, 1] }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeInOut" }}
             whileHover={{ y: -8, boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.1)" }}
             className="p-8 bg-white dark:bg-blue-900/30 rounded-2xl shadow-sm dark:shadow-black/20 border border-gray-100 dark:border-blue-800/30 transition-all duration-300 text-center group cursor-pointer"
           >
@@ -61,7 +61,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 1, 0.5, 1] }}
+            transition={{ duration: 0.8, delay: 0.4, ease: "easeInOut" }}
             whileHover={{ y: -8, boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.1)" }}
             className="p-8 bg-white dark:bg-blue-900/30 rounded-2xl shadow-sm dark:shadow-black/20 border border-gray-100 dark:border-blue-800/30 transition-all duration-300 text-center group cursor-pointer"
           >
@@ -88,7 +88,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, delay: 0.6, ease: [0.25, 1, 0.5, 1] }}
+          transition={{ duration: 0.8, delay: 0.6, ease: "easeInOut" }}
           className="text-center mt-16"
         >
           <p className="text-gray-600 dark:text-gray-400 mb-6 font-medium">

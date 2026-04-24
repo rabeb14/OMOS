@@ -36,7 +36,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: [0.25, 1, 0.5, 1] }}
+          transition={{ duration: 1, ease: "easeInOut" }}
           className="mb-4"
         >
           <Image
@@ -52,7 +52,7 @@ export default function Hero() {
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: [0.25, 1, 0.5, 1] }}
+          transition={{ duration: 1, ease: "easeInOut" }}
           className="text-5xl md:text-6xl font-bold leading-tight mb-6 tracking-tight"
         >
           {d.title1} <br />
@@ -65,7 +65,7 @@ export default function Hero() {
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: [0.25, 1, 0.5, 1], delay: 0.2 }}
+          transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
           className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl"
         >
           {d.subtitle}
@@ -75,7 +75,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1], delay: 0.4 }}
+          transition={{ duration: 0.8, ease: "easeInOut", delay: 0.4 }}
           className="flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto"
         >
           <motion.a

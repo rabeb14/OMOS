@@ -93,7 +93,7 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: 10, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 5, scale: 0.95 }}
-                transition={{ duration: 0.3, ease: [0.25, 1, 0.5, 1] }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
                 className="absolute top-full right-0 mt-4 bg-blue-950/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 px-6 flex flex-col gap-3 min-w-[220px] border border-white/10"
               >
                 {[
@@ -150,7 +150,7 @@ export default function Navbar() {
             )}
           </AnimatePresence>
         </motion.button>
-        
+
         {/* Language Toggles */}
         <div className="ml-2 flex gap-1 bg-white/10 p-1 rounded-lg">
           <button
@@ -181,18 +181,18 @@ export default function Navbar() {
             className="absolute top-full left-0 w-full bg-blue-950/95 backdrop-blur-xl border-b border-white/10 shadow-2xl flex flex-col p-6 gap-6 md:hidden z-40"
           >
             {navLinks.map((link) => (
-              <a 
-                key={link.name} 
-                href={link.href} 
+              <a
+                key={link.name}
+                href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-lg font-medium text-white hover:text-blue-300 transition-colors"
               >
                 {link.name}
               </a>
             ))}
-            
+
             <div className="h-[1px] w-full bg-white/10"></div>
-            
+
             <div className="flex flex-col gap-4">
               <span className="text-sm text-gray-400 uppercase tracking-widest">{d.more}</span>
               {[
@@ -213,7 +213,7 @@ export default function Navbar() {
             </div>
 
             <div className="h-[1px] w-full bg-white/10 my-2"></div>
-            
+
             <div className="flex items-center justify-between">
               {/* Dark Mode Toggle Mobile */}
               <button
