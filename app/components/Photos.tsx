@@ -72,11 +72,11 @@ export default function Gallery() {
               />
 
               {/* Overlay Gradients */}
-              <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500"></div>
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-950/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-950/95 via-black/20 to-transparent opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
               {/* Title */}
-              <div className="absolute bottom-5 left-5 right-5 text-white text-lg font-bold opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 drop-shadow-xl">
+              <div className="absolute bottom-5 left-5 right-5 text-white text-lg font-bold opacity-100 translate-y-0 md:opacity-0 md:translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 drop-shadow-xl">
                 {d.items[img.titleKey]}
               </div>
             </motion.div>
