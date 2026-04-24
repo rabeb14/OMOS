@@ -31,7 +31,7 @@ export default function Hero() {
       <div className="absolute z-0 w-[600px] h-[600px] bg-white/5 blur-[150px] rounded-full top-[-100px] left-[-100px] pointer-events-none"></div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl px-6 flex flex-col items-center">
+      <div className="relative z-10 max-w-4xl px-6 flex flex-col items-center pt-24 md:pt-0">
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -44,7 +44,7 @@ export default function Hero() {
             alt="OMOS Logo"
             width={200}
             height={200}
-            className="object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
+            className="w-32 md:w-48 lg:w-52 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
           />
         </motion.div>
 

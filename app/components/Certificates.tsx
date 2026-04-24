@@ -93,7 +93,7 @@ export default function Certificates() {
         {/* Bouton gauche */}
         <button
           onClick={() => paginate(-1)}
-          className="absolute left-4 md:left-10 text-blue-900 dark:text-white text-4xl hover:scale-125 transition-transform duration-300 ease-[cubic-bezier(0.25,1,0.5,1)] p-4"
+          className="absolute left-1/2 -translate-x-[350px] z-20 text-blue-900 dark:text-white text-4xl hover:scale-125 transition-transform duration-300 ease-[cubic-bezier(0.25,1,0.5,1)] p-4 hidden md:block"
         >
           ‹
         </button>
@@ -101,7 +101,21 @@ export default function Certificates() {
         {/* Bouton droit */}
         <button
           onClick={() => paginate(1)}
-          className="absolute right-4 md:right-10 text-blue-900 dark:text-white text-4xl hover:scale-125 transition-transform duration-300 ease-[cubic-bezier(0.25,1,0.5,1)] p-4"
+          className="absolute right-1/2 translate-x-[350px] z-20 text-blue-900 dark:text-white text-4xl hover:scale-125 transition-transform duration-300 ease-[cubic-bezier(0.25,1,0.5,1)] p-4 hidden md:block"
+        >
+          ›
+        </button>
+
+        {/* Boutons mobiles (plus proches des bords sur petit écran) */}
+        <button
+          onClick={() => paginate(-1)}
+          className="absolute left-2 z-20 text-blue-900 dark:text-white text-4xl p-4 md:hidden"
+        >
+          ‹
+        </button>
+        <button
+          onClick={() => paginate(1)}
+          className="absolute right-2 z-20 text-blue-900 dark:text-white text-4xl p-4 md:hidden"
         >
           ›
         </button>
