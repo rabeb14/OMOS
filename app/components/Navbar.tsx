@@ -8,7 +8,6 @@ import { useLanguage } from "../LanguageContext";
 import { dict } from "../dictionaries";
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const { lang, setLang } = useLanguage();
@@ -27,6 +26,8 @@ export default function Navbar() {
     { name: d.history, href: "#history" },
     { name: d.philosophy, href: "#PhilosophyVision" },
     { name: d.business, href: "#Businesses" },
+    { name: d.hsse, href: "#hsse" },
+    { name: d.references, href: "#ref" },
   ];
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -43,8 +44,8 @@ export default function Navbar() {
         <Image
           src="/logo.png"
           alt="logo"
-          width={40}
-          height={40}
+          width={70}
+          height={70}
           className="object-contain"
         />
         <span className="font-semibold text-lg tracking-wide hidden sm:block">OMOS</span>
@@ -70,50 +71,7 @@ export default function Navbar() {
           </a>
         ))}
 
-        {/* Dropdown */}
-        <div
-          className="relative py-2"
-          onMouseEnter={() => setOpen(true)}
-          onMouseLeave={() => setOpen(false)}
-        >
-          <button className="relative group flex items-center gap-1">
-            {d.more}
-            <motion.span
-              animate={{ rotate: open ? 180 : 0 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
-            >
-              ▾
-            </motion.span>
-          </button>
 
-          {/* Menu déroulant */}
-          <AnimatePresence>
-            {open && (
-              <motion.div
-                initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: 5, scale: 0.95 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="absolute top-full right-0 mt-4 bg-blue-950/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 px-6 flex flex-col gap-3 min-w-[220px] border border-white/10"
-              >
-                {[
-                  { name: d.hsse, href: "#hsse" },
-                  { name: d.certificates, href: "#certif" },
-                  { name: d.references, href: "#ref" },
-                  { name: d.photos, href: "#photo" },
-                ].map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-300 ease-out whitespace-nowrap"
-                  >
-                    {item.name}
-                  </a>
-                ))}
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
 
         {/* Dark Mode Toggle */}
         <motion.button
@@ -152,7 +110,7 @@ export default function Navbar() {
         </motion.button>
 
         {/* Language Toggles */}
-        <div className="ml-2 flex gap-1 bg-white/10 p-1 rounded-lg">
+        {/* <div className="ml-2 flex gap-1 bg-white/10 p-1 rounded-lg">
           <button
             onClick={() => setLang("en")}
             className={`px-2.5 py-1 text-sm font-bold rounded ${lang === "en" ? "bg-white text-blue-950" : "text-white hover:bg-white/20"
@@ -167,7 +125,7 @@ export default function Navbar() {
           >
             FR
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* Mobile Menu Overlay */}
@@ -191,26 +149,7 @@ export default function Navbar() {
               </a>
             ))}
 
-            <div className="h-[1px] w-full bg-white/10"></div>
 
-            <div className="flex flex-col gap-4">
-              <span className="text-sm text-gray-400 uppercase tracking-widest">{d.more}</span>
-              {[
-                { name: d.hsse, href: "#hsse" },
-                { name: d.certificates, href: "#certif" },
-                { name: d.references, href: "#ref" },
-                { name: d.photos, href: "#photo" },
-              ].map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="text-white hover:text-blue-300 transition-colors ml-4"
-                >
-                  {item.name}
-                </a>
-              ))}
-            </div>
 
             <div className="h-[1px] w-full bg-white/10 my-2"></div>
 

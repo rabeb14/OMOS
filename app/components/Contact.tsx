@@ -20,7 +20,7 @@ export default function Contact() {
           transition={{ duration: 0.8, ease: "easeInOut" }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl font-bold mb-4 tracking-tight text-blue-900 dark:text-white">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight text-blue-900 dark:text-white">
             {d.title}
           </h1>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
@@ -91,11 +91,11 @@ export default function Contact() {
           transition={{ duration: 0.8, delay: 0.6, ease: "easeInOut" }}
           className="text-center mt-16"
         >
-          <p className="text-gray-600 dark:text-gray-400 mb-6 font-medium">
+          {/* <p className="text-gray-600 dark:text-gray-400 mb-6 font-medium">
             {d.ready}
-          </p>
+          </p> */}
 
-          <motion.a
+          {/* <motion.a
             href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@omos-international.com"
             target="_blank"
             whileHover={{ scale: 1.05 }}
@@ -104,7 +104,7 @@ export default function Contact() {
             className="inline-block bg-blue-900 dark:bg-blue-700 text-white px-8 py-3.5 rounded-xl font-semibold shadow-lg hover:shadow-xl hover:bg-blue-800 dark:hover:bg-blue-600 transition-colors"
           >
             {d.cta}
-          </motion.a>
+          </motion.a> */}
         </motion.div>
 
       </div>

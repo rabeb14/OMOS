@@ -3,7 +3,7 @@ import Hero from "./components/Hero";
 import History from "./components/History";
 import Contact from "./components/Contact";
 import PhilosophyVision from "./components/Philosophy&Vision";
-import Businesses from "./components/Business";
+import HolisticMaintenance from "./components/HolisticMaintenance";
 import HSSEPolicy from "./components/HSSE";
 import Certificates from "./components/Certificates";
 import References from "./components/References";
@@ -15,11 +15,11 @@ export default function Home() {
       <Hero />
       <History />
       <PhilosophyVision />
-      <Businesses />
+      <HolisticMaintenance />
       <HSSEPolicy />
-      <Certificates />
+      {/* <Certificates /> */}
       <References />
-      <Photos />
+      {/* <Photos /> */}
       <Contact />
     </>
   );

@@ -6,13 +6,20 @@ import { useState } from "react";
 import { useLanguage } from "../LanguageContext";
 import { dict } from "../dictionaries";
 
+const images = [
+  "/certif1.png",
+  "/certif2.png",
+  "/certif3.png",
+];
 export default function HSSE() {
   const [selected, setSelected] = useState<string | null>(null);
   const { lang } = useLanguage();
   const d = dict[lang as keyof typeof dict].hsse;
+  const c = dict[lang as keyof typeof dict].certificates;
+
 
   return (
-    <section id="hsse" className="py-24 bg-gray-50 dark:bg-blue-950 text-black dark:text-white overflow-hidden transition-colors duration-300">
+    <section id="hsse" className="pt-24 pb-8 bg-white dark:bg-blue-950 text-blue-900 dark:text-white overflow-hidden transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Titre centré */}
@@ -35,7 +42,7 @@ export default function HSSE() {
             hidden: { opacity: 0 },
             visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
           }}
-          className="grid md:grid-cols-2 gap-10"
+          className="grid md:grid-cols-2 gap-12"
         >
 
           {/* Image 1 */}
@@ -44,23 +51,15 @@ export default function HSSE() {
               hidden: { opacity: 0, y: 30 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeInOut" } }
             }}
-            whileHover={{ y: -8, scale: 1.02 }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
-            className="relative rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl dark:shadow-black/30 group cursor-pointer transition-shadow duration-500"
-            onClick={() => setSelected("/hsse1.png")}
+            className="flex flex-col items-center group"
           >
-            <Image
-              src="/hsse1.png"
-              alt="Safety"
-              width={600}
-              height={400}
-              className="object-cover w-full h-[350px] group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
-            />
-
-            <div className="absolute inset-0 bg-black/10 group-hover:bg-black/40 transition-colors duration-500 ease-out"></div>
-
-            <div className="absolute bottom-4 left-4 text-white text-lg font-semibold opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] drop-shadow-md">
-              {d.safety}
+            <div className="relative w-full aspect-[3/4] md:aspect-auto md:h-[600px] rounded-2xl overflow-hidden shadow-2xl bg-gray-50 dark:bg-blue-900/30 p-2 border border-gray-200 dark:border-blue-800/50">
+              <Image
+                src="/QHSSE1.jpeg"
+                alt="Safety"
+                fill
+                className="object-contain"
+              />
             </div>
           </motion.div>
 
@@ -70,58 +69,67 @@ export default function HSSE() {
               hidden: { opacity: 0, y: 30 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeInOut" } }
             }}
-            whileHover={{ y: -8, scale: 1.02 }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
-            className="relative rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl dark:shadow-black/30 group cursor-pointer transition-shadow duration-500"
-            onClick={() => setSelected("/hsse2.png")}
+            className="flex flex-col items-center group"
           >
-            <Image
-              src="/hsse2.png"
-              alt="Environment"
-              width={600}
-              height={400}
-              className="object-cover w-full h-[350px] group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
-            />
-
-            <div className="absolute inset-0 bg-black/10 group-hover:bg-black/40 transition-colors duration-500 ease-out"></div>
-
-            <div className="absolute bottom-4 left-4 text-white text-lg font-semibold opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] drop-shadow-md">
-              {d.environment}
+            <div className="relative w-full aspect-[3/4] md:aspect-auto md:h-[600px] rounded-2xl overflow-hidden shadow-2xl bg-gray-50 dark:bg-blue-900/30 p-2 border border-gray-200 dark:border-blue-800/50">
+              <Image
+                src="/QHSSE2.jpeg"
+                alt="Environment"
+                fill
+                className="object-contain"
+              />
             </div>
           </motion.div>
 
         </motion.div>
       </div>
+      <div id="certif" className="max-w-7xl mx-auto px-6 text-center pt-24 border-t border-gray-100 dark:border-blue-900/50">
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          className="text-4xl md:text-5xl font-bold mb-20 text-blue-900 dark:text-white"
+        >
+          {c.title}
+        </motion.h2>
 
-      {/* Popup */}
-      <AnimatePresence>
-        {selected && (
-          <motion.div
-            className="fixed inset-0 bg-blue-950/90 backdrop-blur-sm flex items-center justify-center z-50 p-6"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.4, ease: "easeInOut" }}
-            onClick={() => setSelected(null)}
-          >
+        {/* Certificates Grid */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
+          }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-10"
+        >
+          {images.map((img, i) => (
             <motion.div
-              initial={{ scale: 0.9, opacity: 0, y: 20 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.9, opacity: 0, y: 20 }}
-              transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              onClick={(e) => e.stopPropagation()}
+              key={i}
+              variants={{
+                hidden: { opacity: 0, scale: 0.9, y: 20 },
+                visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+              }}
+              whileHover={{ y: -10, scale: 1.02 }}
+              className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl bg-gray-50 dark:bg-blue-900/30 p-4 border border-gray-100 dark:border-blue-800/50 group transition-all duration-500"
             >
-              <Image
-                src={selected}
-                alt="preview"
-                width={1000}
-                height={700}
-                className="rounded-2xl shadow-2xl"
-              />
+              <div className="relative w-full h-full">
+                <Image
+                  src={img}
+                  alt={`Certificate ${i + 1}`}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+
+              {/* Subtle Overlay on Hover */}
+              <div className="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/5 transition-colors duration-500" />
             </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          ))}
+        </motion.div>
+      </div>
     </section>
   );
 }
