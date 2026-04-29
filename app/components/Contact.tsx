@@ -9,28 +9,28 @@ export default function Contact() {
   const d = dict[lang as keyof typeof dict].contact;
 
   return (
-    <section id="contact" className="py-12 bg-gray-50 dark:bg-blue-950 overflow-hidden transition-colors duration-300">
-      <div className="scale-[0.8] origin-top">
-        <div className="max-w-5xl mx-auto px-6">
+    <section id="contact" className="py-8 bg-gray-50 dark:bg-blue-950 overflow-hidden transition-colors duration-300">
+      <div className="max-w-6xl mx-auto px-6">
 
           {/* Title */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
-            className="text-center mb-16"
+            transition={{ duration: 0.7, ease: "easeInOut" }}
+            className="text-center mb-12"
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight text-blue-900 dark:text-white">
+            <h1 className="text-3xl md:text-4xl font-bold mb-3 tracking-tight text-blue-900 dark:text-white">
               {d.title}
             </h1>
-            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
+            <div className="h-1 w-24 bg-blue-500 mx-auto mb-4 rounded-full" />
+            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-base md:text-lg">
               {d.subtitle}
             </p>
           </motion.div>
 
           {/* Contact Cards */}
-          <div className="grid md:grid-cols-2 gap-10">
+          <div className="grid md:grid-cols-2 gap-6">
 
             {/* Phone */}
             <motion.div
@@ -39,12 +39,12 @@ export default function Contact() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeInOut" }}
               whileHover={{ y: -8, boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.1)" }}
-              className="p-8 bg-white dark:bg-blue-900/30 rounded-2xl shadow-sm dark:shadow-black/20 border border-gray-100 dark:border-blue-800/30 transition-all duration-300 text-center group cursor-pointer"
+              className="p-7 bg-white/90 dark:bg-blue-900/30 rounded-2xl shadow-md dark:shadow-black/20 border border-gray-100 dark:border-blue-800/40 transition-all duration-300 text-center group"
             >
               <motion.div
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                className="text-4xl mb-6 inline-block"
+                className="text-3xl mb-4 inline-block"
               >
                 📞
               </motion.div>
@@ -64,12 +64,12 @@ export default function Contact() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: 0.4, ease: "easeInOut" }}
               whileHover={{ y: -8, boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.1)" }}
-              className="p-8 bg-white dark:bg-blue-900/30 rounded-2xl shadow-sm dark:shadow-black/20 border border-gray-100 dark:border-blue-800/30 transition-all duration-300 text-center group cursor-pointer"
+              className="p-7 bg-white/90 dark:bg-blue-900/30 rounded-2xl shadow-md dark:shadow-black/20 border border-gray-100 dark:border-blue-800/40 transition-all duration-300 text-center group"
             >
               <motion.div
                 whileHover={{ scale: 1.1, rotate: -5 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                className="text-4xl mb-6 inline-block"
+                className="text-3xl mb-4 inline-block"
               >
                 ✉️
               </motion.div>
@@ -89,8 +89,8 @@ export default function Contact() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, delay: 0.6, ease: "easeInOut" }}
-            className="text-center mt-16"
+            transition={{ duration: 0.8, delay: 0.4, ease: "easeInOut" }}
+            className="text-center mt-10"
           >
             {/* <p className="text-gray-600 dark:text-gray-400 mb-6 font-medium">
             {d.ready}
@@ -107,9 +107,7 @@ export default function Contact() {
             {d.cta}
           </motion.a> */}
           </motion.div>
-
         </div>
-      </div>
     </section>
   );
 }

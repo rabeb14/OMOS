@@ -10,7 +10,7 @@ import { dict } from "../dictionaries";
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const { theme, toggleTheme } = useTheme();
-  const { lang, setLang } = useLanguage();
+  const { lang } = useLanguage();
 
   const d = dict[lang as keyof typeof dict].nav;
 

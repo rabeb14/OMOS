@@ -158,7 +158,7 @@ export default function History() {
   return (
     <section
       id="history"
-      className="py-35 bg-gray-50 dark:bg-blue-950 transition-colors duration-500 overflow-hidden"
+  className="py-24 bg-gray-50 dark:bg-blue-950 transition-colors duration-500 overflow-hidden"
     >
       <div className="max-w-5xl mx-auto px-4">
 

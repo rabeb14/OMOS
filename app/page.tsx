@@ -5,22 +5,22 @@ import Contact from "./components/Contact";
 import PhilosophyVision from "./components/Philosophy&Vision";
 import HolisticMaintenance from "./components/HolisticMaintenance";
 import HSSEPolicy from "./components/HSSE";
-import Certificates from "./components/Certificates";
 import References from "./components/References";
-import Photos from "./components/Photos";
 export default function Home() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <History />
-      <PhilosophyVision />
-      <HolisticMaintenance />
-      <HSSEPolicy />
-      {/* <Certificates /> */}
-      <References />
-      {/* <Photos /> */}
-      <Contact />
+      <main className="flex flex-col">
+        <Hero />
+        <History />
+        <PhilosophyVision />
+        <HolisticMaintenance />
+        <HSSEPolicy />
+        {/* <Certificates /> */}
+        <References />
+        {/* <Photos /> */}
+        <Contact />
+      </main>
     </>
   );
 }

@@ -138,7 +138,6 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { useLanguage } from "../LanguageContext";
 import { dict } from "../dictionaries";
 
@@ -155,7 +154,7 @@ export default function HSSE() {
   const c = dict[lang as keyof typeof dict].certificates;
 
   return (
-    <section id="hsse" className="py-30 bg-white dark:bg-blue-950">
+  <section id="hsse" className="py-10 bg-white dark:bg-blue-950">
 
       <div className="max-w-5xl mx-auto px-1">
 

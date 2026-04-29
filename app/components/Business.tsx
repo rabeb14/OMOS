@@ -9,7 +9,7 @@ export default function Businesses() {
   const d = dict[lang as keyof typeof dict].business;
 
   return (
-    <section id="Businesses" className="py-24 bg-blue-900 dark:bg-blue-950 text-white transition-colors duration-300">
+  <section id="Businesses" className="py-8 bg-blue-900 dark:bg-blue-950 text-white transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Title */}
@@ -18,7 +18,7 @@ export default function Businesses() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="text-4xl font-bold text-center mb-16"
+          className="text-4xl font-bold text-center mb-10"
         >
           {d.title}
         </motion.h2>

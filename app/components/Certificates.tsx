@@ -16,7 +16,7 @@ export default function Certificates() {
   const d = dict[lang as keyof typeof dict].certificates;
 
   return (
-    <section id="certif" className="pt-8 pb-28 bg-white dark:bg-blue-950 transition-colors duration-300">
+  <section id="certif" className="pt-6 pb-16 bg-white dark:bg-blue-950 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}

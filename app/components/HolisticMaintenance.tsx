@@ -40,7 +40,7 @@ export default function HolisticMaintenance() {
   const [active, setActive] = useState<number | null>(null);
 
   return (
-    <section id="Businesses" className="py-24 bg-blue-50 dark:bg-blue-950 text-blue-900 dark:text-white overflow-hidden transition-colors duration-300">
+  <section id="Businesses" className="py-10 bg-blue-50 dark:bg-blue-950 text-blue-900 dark:text-white overflow-hidden transition-colors duration-300">
       <div className="max-w-[1200px] mx-auto px-6">
 
         {/* Titre */}
@@ -56,50 +56,52 @@ export default function HolisticMaintenance() {
         </motion.h2>
 
         {/* Diagramme Interactif */}
-        <div className="relative aspect-video w-[80%] mx-auto rounded-2xl overflow-hidden border border-white/10 shadow-xl bg-black/40">
-          <Image
-            src="/holistic.png"
-            alt="Holistic Industrial View"
-            fill
-            className="object-cover opacity-60"
-          />
+        <div className="relative w-full md:w-[80%] mx-auto">
+          <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-xl bg-black/40">
+            <Image
+              src="/holistic.png"
+              alt="Holistic Industrial View"
+              fill
+              className="object-cover opacity-60"
+            />
 
-          {/* Overlay avec lignes et hotspots */}
-          <div className="absolute inset-0">
-            {hotspots.map((spot) => {
-              // On force le côté pour certains points ou on utilise la logique auto
-              const forceSide: { [key: number]: 'left' | 'right' } = {
-                2: 'right', // Pipeline Services à droite
-              };
+            {/* Overlay avec lignes et hotspots */}
+            <div className="absolute inset-0">
+              {hotspots.map((spot) => {
+                // On force le côté pour certains points ou on utilise la logique auto
+                const forceSide: { [key: number]: 'left' | 'right' } = {
+                  2: 'right', // Pipeline Services à droite
+                };
 
-              const side = forceSide[spot.id] || (parseInt(spot.x) > 50 ? 'left' : 'right');
-              const sideClass = side === 'left' ? 'right-full mr-4' : 'left-full ml-4';
+                const side = forceSide[spot.id] || (parseInt(spot.x) > 50 ? 'left' : 'right');
+                const sideClass = side === 'left' ? 'right-full mr-4' : 'left-full ml-4';
 
-              return (
-                <div
-                  key={spot.id}
-                  className="absolute"
-                  style={{ left: spot.x, top: spot.y }}
-                >
-                  {/* Hotspot Pulse */}
-                  <motion.button
-                    onClick={() => setActive(active === spot.id ? null : spot.id)}
-                    whileHover={{ scale: 1.2 }}
-                    className="relative flex items-center justify-center w-8 h-8 z-20 group"
+                return (
+                  <div
+                    key={spot.id}
+                    className="absolute"
+                    style={{ left: spot.x, top: spot.y }}
                   >
-                    <span className="absolute inset-0 rounded-full bg-blue-500/50 animate-ping"></span>
-                    <span className="relative w-4 h-4 bg-blue-400 rounded-full border-2 border-white shadow-[0_0_15px_#60a5fa] group-hover:bg-white transition-colors"></span>
+                    {/* Hotspot Pulse */}
+                    <motion.button
+                      onClick={() => setActive(active === spot.id ? null : spot.id)}
+                      whileHover={{ scale: 1.2 }}
+                      className="relative flex items-center justify-center w-8 h-8 z-20 group"
+                    >
+                      <span className="absolute inset-0 rounded-full bg-blue-500/50 animate-ping"></span>
+                      <span className="relative w-4 h-4 bg-blue-400 rounded-full border-2 border-white shadow-[0_0_15px_#60a5fa] group-hover:bg-white transition-colors"></span>
 
-                    {/* Label fixe (Format Image) */}
-                    <div className={`absolute ${sideClass} px-4 py-2 bg-blue-900/90 backdrop-blur-md border border-blue-400/50 rounded-lg whitespace-nowrap hidden md:block shadow-xl`}>
-                      <p className="text-xs font-bold uppercase tracking-widest text-blue-100">
-                        {d.cards[spot.id].title}
-                      </p>
-                    </div>
-                  </motion.button>
-                </div>
-              );
-            })}
+                      {/* Label fixe (Format Image) */}
+                      <div className={`absolute ${sideClass} px-4 py-2 bg-blue-900/90 backdrop-blur-md border border-blue-400/50 rounded-lg whitespace-nowrap hidden md:block shadow-xl`}>
+                        <p className="text-xs font-bold uppercase tracking-widest text-blue-100">
+                          {d.cards[spot.id].title}
+                        </p>
+                      </div>
+                    </motion.button>
+                  </div>
+                );
+              })}
+            </div>
           </div>
 
           {/* Carte de détails flottante */}
@@ -109,7 +111,7 @@ export default function HolisticMaintenance() {
                 initial={{ opacity: 0, x: 50, scale: 0.9 }}
                 animate={{ opacity: 1, x: 0, scale: 1 }}
                 exit={{ opacity: 0, x: 50, scale: 0.9 }}
-                className="absolute right-6 top-6 bottom-6 w-80 bg-blue-950/95 backdrop-blur-xl border border-white/20 rounded-2xl p-8 z-30 shadow-2xl overflow-y-auto"
+                className="mt-6 w-full md:mt-0 md:absolute md:right-6 md:top-6 md:bottom-6 md:w-80 bg-blue-950/95 backdrop-blur-xl border border-white/20 rounded-2xl p-8 z-30 shadow-2xl overflow-y-auto"
               >
                 <button
                   onClick={() => setActive(null)}

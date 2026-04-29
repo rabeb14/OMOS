@@ -43,7 +43,7 @@ export default function Gallery() {
   }, []);
 
   return (
-    <section id="photo" className="py-24 bg-white dark:bg-blue-950 transition-colors duration-300">
+  <section id="photo" className="py-10 bg-white dark:bg-blue-950 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Title */}

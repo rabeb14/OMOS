@@ -1,18 +1,19 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useLanguage } from "../LanguageContext";
 import { dict } from "../dictionaries";
 
 export default function Hero() {
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 1000], [0, 300]);
+  const prefersReducedMotion = useReducedMotion();
   const { lang } = useLanguage();
   const d = dict[lang as keyof typeof dict].hero;
 
   return (
-    <section className="relative h-screen flex items-center justify-center text-center text-white overflow-hidden bg-blue-950">
+  <section className="relative min-h-[80vh] md:min-h-screen flex items-center justify-center text-center text-white overflow-hidden bg-blue-950 py-10 md:py-0">
       {/* Parallax Background */}
       <motion.div
         className="absolute inset-0 z-0"
@@ -20,7 +21,7 @@ export default function Hero() {
           backgroundImage: "url('/bg.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          y,
+          y: prefersReducedMotion ? 0 : y,
         }}
       />
 
@@ -31,7 +32,7 @@ export default function Hero() {
       <div className="absolute z-0 w-[600px] h-[600px] bg-white/5 blur-[150px] rounded-full top-[-100px] left-[-100px] pointer-events-none"></div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl px-6 flex flex-col items-center pt-24 md:pt-0">
+  <div className="relative z-10 max-w-4xl px-6 flex flex-col items-center pt-12 md:pt-0">
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -44,7 +45,9 @@ export default function Hero() {
             alt="OMOS Logo"
             width={200}
             height={200}
-            className="w-32 md:w-48 lg:w-52 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
+            sizes="(max-width: 640px) 128px, (max-width: 1024px) 192px, 208px"
+            priority
+            className="w-28 sm:w-32 md:w-48 lg:w-52 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
           />
         </motion.div>
 
@@ -53,7 +56,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="text-5xl md:text-6xl font-bold leading-tight mb-6 tracking-tight"
+          className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 tracking-tight"
         >
           {d.title1} <br />
           <span className="text-gray-300">
@@ -66,7 +69,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
-          className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl"
+          className="text-base sm:text-lg md:text-xl text-gray-300 mb-10 max-w-2xl"
         >
           {d.subtitle}
         </motion.p>
@@ -83,7 +86,7 @@ export default function Hero() {
             whileHover={{ scale: 1.02, backgroundColor: "#f3f4f6" }}
             whileTap={{ scale: 0.98 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="bg-white text-blue-900 px-8 py-3.5 rounded-xl font-semibold shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] flex items-center justify-center"
+            className="bg-white text-blue-900 px-8 py-3.5 rounded-xl font-semibold shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] flex items-center justify-center min-h-[48px]"
           >
             {d.discover}
           </motion.a>
@@ -93,7 +96,7 @@ export default function Hero() {
             whileHover={{ scale: 1.02, backgroundColor: "rgba(255,255,255,0.1)" }}
             whileTap={{ scale: 0.98 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="border border-white/30 backdrop-blur-sm px-8 py-3.5 rounded-xl text-white flex items-center justify-center hover:border-white/60"
+            className="border border-white/30 backdrop-blur-sm px-8 py-3.5 rounded-xl text-white flex items-center justify-center hover:border-white/60 min-h-[48px]"
           >
             {d.contact}
           </motion.a>

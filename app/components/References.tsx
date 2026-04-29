@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useLanguage } from "../LanguageContext";
@@ -28,15 +28,10 @@ export default function References() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
 
-  // Reset image index when service changes
-  useEffect(() => {
-    setCurrentImgIndex(0);
-  }, [activeIndex]);
-
   const activeService = galleryData[activeIndex];
 
   return (
-    <section id="ref" className="py-30 bg-gray-50 dark:bg-blue-950 transition-colors duration-300">
+  <section id="ref" className="py-10 bg-gray-50 dark:bg-blue-950 transition-colors duration-300">
       <div className="scale-[0.8] origin-top">
         <div className="max-w-8xl mx-auto px-8">
 
@@ -64,7 +59,10 @@ export default function References() {
               {d.serviceList.map((title, index) => (
                 <button
                   key={index}
-                  onClick={() => setActiveIndex(index)}
+                  onClick={() => {
+                    setActiveIndex(index);
+                    setCurrentImgIndex(0);
+                  }}
                   className={`text-left px-5 py-4 rounded-2xl transition-all duration-300 border flex items-center justify-between group ${activeIndex === index
                     ? "bg-blue-600 border-blue-600 shadow-lg shadow-blue-500/30 transform scale-[1.02]"
                     : "bg-white dark:bg-blue-900/30 border-gray-100 dark:border-blue-800/50 hover:bg-blue-50 dark:hover:bg-blue-800/80 hover:border-blue-200 dark:hover:border-blue-700"

@@ -189,7 +189,7 @@ export default function PhilosophyVision() {
   return (
     <section
       id="PhilosophyVision"
-      className="py-30 bg-gray-50 dark:bg-blue-950 transition-colors duration-300"
+  className="py-20 bg-gray-50 dark:bg-blue-950 transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto px-4">
 
