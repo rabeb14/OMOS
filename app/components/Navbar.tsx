@@ -166,7 +166,7 @@ export default function Navbar() {
               </button>
 
               {/* Language Mobile */}
-              <div className="flex gap-1 bg-white/10 p-1 rounded-lg">
+              {/* <div className="flex gap-1 bg-white/10 p-1 rounded-lg">
                 <button
                   onClick={() => { setLang("en"); setMobileMenuOpen(false); }}
                   className={`px-3 py-1 text-sm font-bold rounded ${lang === "en" ? "bg-white text-blue-950" : "text-white hover:bg-white/20"
@@ -181,7 +181,7 @@ export default function Navbar() {
                 >
                   FR
                 </button>
-              </div>
+              </div> */}
             </div>
           </motion.div>
         )}

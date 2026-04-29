@@ -49,13 +49,14 @@ export default function HolisticMaintenance() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="text-4xl md:text-5xl font-bold text-center mb-12 text-blue-900 dark:text-white"
+          className="text-4xl md:text-4xl font-bold text-center mb-12 text-blue-900 dark:text-white"
         >
           {d.title}
+          <div className="h-1 w-26 bg-blue-500 mx-auto mt-3 rounded-full" />
         </motion.h2>
 
         {/* Diagramme Interactif */}
-        <div className="relative aspect-video w-full rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-black/40">
+        <div className="relative aspect-video w-[80%] mx-auto rounded-2xl overflow-hidden border border-white/10 shadow-xl bg-black/40">
           <Image
             src="/holistic.png"
             alt="Holistic Industrial View"

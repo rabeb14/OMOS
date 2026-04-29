@@ -37,8 +37,8 @@ export const dict = {
       },
       milestone3: {
         date: "2022",
-        title: "Launch of OMOS",
-        desc: "Launch of OMOS (Industrial Maintenance & Oil/Gas)."
+        title: "Launching OMOS",
+        desc: "Launching OMOS (Industrial Maintenance & Oil/Gas)."
       },
       milestone4: {
         date: "2026",
