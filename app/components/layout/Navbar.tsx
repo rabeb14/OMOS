@@ -15,10 +15,10 @@ export default function Navbar() {
   const { lang, setLang } = useLanguage();
   const [langMenuOpen, setLangMenuOpen] = useState(false);
 
-  const LANGUAGES: { code: "en" | "fr" | "ar"; label: string; flag: string }[] = [
-    { code: "en", label: "EN", flag: "🇬🇧" },
-    { code: "fr", label: "FR", flag: "🇫🇷" },
-    { code: "ar", label: "ع", flag: "🇸🇦" },
+  const LANGUAGES: { code: "en" | "fr" | "ar"; label: string }[] = [
+    { code: "en", label: "EN" },
+    { code: "fr", label: "FR" },
+    { code: "ar", label: "ع" },
   ];
   const currentLang = LANGUAGES.find((l) => l.code === lang) ?? LANGUAGES[0];
 
@@ -117,7 +117,6 @@ export default function Navbar() {
         className="flex items-center gap-1 px-3 py-2 rounded-full text-[13px] font-medium text-gray-700 dark:text-gray-200 hover:bg-white/50 dark:hover:bg-white/10 transition-all duration-300"
         aria-label="Change language"
       >
-        <span>{currentLang.flag}</span>
         <span className="font-bold">{currentLang.label}</span>
       </button>
       <AnimatePresence>
@@ -142,7 +141,6 @@ export default function Navbar() {
                     : "text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-white/5"
                 }`}
               >
-                <span>{l.flag}</span>
                 <span>{l.label}</span>
               </button>
             ))}
