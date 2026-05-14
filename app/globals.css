@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+/* Tailwind v4: enable class-based dark mode */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-brand-50: #e0f2ff;
+  --color-brand-100: #b3e0ff;
+  --color-brand-400: #00a6fb;
+  --color-brand-500: #0582ca;
+  --color-brand-800: #004a77;
+  --color-brand-900: #006494;
+  --color-brand-950: #003554;
+}
+
+:root {
+  --background: #003554;
+  --foreground: #171717;
+}
+
+.dark {
+  --background: #003554;
+  --foreground: #ededed;
+}
+
+/* =========================================================================
+   Cross-browser base reset (Safari / Chrome / Firefox)
+   ========================================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  /* Évite le shift horizontal Windows (scrollbar 15px) vs macOS (overlay 0px) */
+  scrollbar-gutter: stable;
+  /* Empêche le zoom automatique de Safari iOS sur les inputs < 16px */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Évite le flash de police (Windows/macOS métriques différentes) */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  /* Supprime le highlight bleu/gris au tap sur iOS Safari */
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* =========================================================================
+   Safari : fix `text-justify` qui crée d'énormes espaces sur lignes courtes
+   ========================================================================= */
+.text-justify {
+  /* Empêche Safari d'étirer les espaces de façon extrême */
+  text-justify: inter-word;
+  /* Coupe proprement les mots longs (URLs, noms techniques type API-17J) */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+/* =========================================================================
+   Safari : force le rendu correct de `bg-clip-text` en dark mode
+   ========================================================================= */
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* =========================================================================
+   Safari : corrige les bugs de compositing avec backdrop-blur + overflow-hidden
+   Force la création d'une nouvelle couche GPU pour éviter que les enfants
+   avec `transform` (Framer Motion) disparaissent ou clignotent.
+   ========================================================================= */
+[class*="backdrop-blur"] {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: backdrop-filter;
+}
+
+/* =========================================================================
+   Images : empêche le spacing fantôme sous les <img> inline (Safari)
+   ========================================================================= */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* =========================================================================
+   Form elements : reset Safari qui applique ses propres styles iOS
+   ========================================================================= */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+button {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+::selection {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.dark ::selection {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Smooth scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 3px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(0, 166, 251, 0.3);
+  border-radius: 3px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 166, 251, 0.5);
+}
+
+/* =========================================================================
+   Support arabe (RTL) — police adaptée et ajustements directionnels
+   ========================================================================= */
+html[lang="ar"] body,
+html[dir="rtl"] body {
+  font-family: "Segoe UI", Tahoma, "Noto Sans Arabic", "Geeza Pro",
+    "Arabic Typesetting", system-ui, -apple-system, sans-serif;
+}
+
+/* Augmente très légèrement la taille pour la lisibilité de l'arabe */
+html[dir="rtl"] {
+  font-size: 1.02em;
+}
+
+/* Inverse les ombres directionnelles courantes en RTL */
+html[dir="rtl"] .scrollbar-thin {
+  direction: rtl;
+}
