@@ -42,22 +42,21 @@ export default function Contact() {
               className="p-5 sm:p-6 md:p-7 bg-white/90 dark:bg-brand-800/40 rounded-2xl shadow-md dark:shadow-black/30 border border-gray-100 dark:border-brand-400/15 transition-all duration-300 group"
             >
               <div className="flex items-center gap-3 mb-3 sm:mb-4">
-                <span className="text-xl sm:text-2xl">🇹🇳</span>
                 <div>
                   <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white">
                     {d.headOffice}
                   </h3>
-                  <span className="text-xs font-medium text-brand-500">Tunisia</span>
+                  <span className="text-xs font-medium text-brand-500">{d.tunisia || "Tunisia"}</span>
                 </div>
               </div>
               <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
                 <div className="flex items-start gap-3">
                   <span className="mt-0.5">📍</span>
-                  <span className="text-gray-600 dark:text-gray-300">Tunisia</span>
+                  <span className="text-gray-600 dark:text-gray-300">{d.tunisia || "Tunisia"}</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <span>📞</span>
-                  <span className="text-gray-600 dark:text-gray-300">+216 24 339 166</span>
+                  <span className="text-gray-600 dark:text-gray-300" dir="ltr">{d.phoneTunisia || "+216 24 339 166"}</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <span>✉️</span>
@@ -76,22 +75,21 @@ export default function Contact() {
               className="p-5 sm:p-6 md:p-7 bg-white/90 dark:bg-brand-800/40 rounded-2xl shadow-md dark:shadow-black/30 border border-gray-100 dark:border-brand-400/15 transition-all duration-300 group"
             >
               <div className="flex items-center gap-3 mb-3 sm:mb-4">
-                <span className="text-xl sm:text-2xl">🇱🇾</span>
                 <div>
                   <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white">
                     {d.branchOffice}
                   </h3>
-                  <span className="text-xs font-medium text-brand-500">Libya</span>
+                  <span className="text-xs font-medium text-brand-500">{d.libya || "Libya"}</span>
                 </div>
               </div>
               <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
                 <div className="flex items-start gap-3">
                   <span className="mt-0.5">📍</span>
-                  <span className="text-gray-600 dark:text-gray-300">Libya</span>
+                  <span className="text-gray-600 dark:text-gray-300">{d.libya || "Libya"}</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <span>📞</span>
-                  <span className="text-gray-600 dark:text-gray-300">+218 91 226 4780</span>
+                  <span className="text-gray-600 dark:text-gray-300" dir="ltr">{d.phoneLibya || "+218 91 226 4780"}</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <span>✉️</span>

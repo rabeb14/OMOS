@@ -10,6 +10,7 @@ export default function Footer() {
   const t = dict[lang as keyof typeof dict];
   const d = t.nav;
   const f = t.footer;
+  const c = t.contact;
   const year = new Date().getFullYear();
 
   const links = [
@@ -63,20 +64,20 @@ export default function Footer() {
 
           {/* Tunisia */}
           <div className="flex flex-col gap-1">
-            <h4 className="text-white font-semibold text-[11px] uppercase tracking-wider flex items-center gap-1">
-              🇹🇳 {f.headOffice}
+            <h4 className="text-white font-semibold text-[11px] uppercase tracking-wider">
+              {f.headOffice}
             </h4>
-            <p className="text-[11px] text-white/50">Tunisia</p>
-            <p className="text-[11px] text-white/50">📞 +216 24 339 166</p>
+            <p className="text-[11px] text-white/50">{c.tunisia || "Tunisia"}</p>
+            <p className="text-[11px] text-white/50" dir="ltr">📞 {c.phoneTunisia || "+216 24 339 166"}</p>
           </div>
 
           {/* Libya */}
           <div className="flex flex-col gap-1">
-            <h4 className="text-white font-semibold text-[11px] uppercase tracking-wider flex items-center gap-1">
-              🇱🇾 {f.branchOffice}
+            <h4 className="text-white font-semibold text-[11px] uppercase tracking-wider">
+              {f.branchOffice}
             </h4>
-            <p className="text-[11px] text-white/50">Libya</p>
-            <p className="text-[11px] text-white/50">📞 +218 91 226 4780</p>
+            <p className="text-[11px] text-white/50">{c.libya || "Libya"}</p>
+            <p className="text-[11px] text-white/50" dir="ltr">📞 {c.phoneLibya || "+218 91 226 4780"}</p>
           </div>
 
           {/* Copyright & Back to top */}
@@ -106,8 +107,8 @@ export default function Footer() {
             <span className="text-white font-bold text-xs">OMOS</span>
           </Link>
           <div className="flex items-center gap-2 sm:gap-3 text-[9px] sm:text-[10px] text-white/50">
-            <span className="hidden sm:inline">🇹🇳 +216 24 339 166</span>
-            <span className="hidden sm:inline">🇱🇾 +218 91 226 4780</span>
+            <span className="hidden sm:inline" dir="ltr">{c.phoneTunisia || "+216 24 339 166"}</span>
+            <span className="hidden sm:inline" dir="ltr">{c.phoneLibya || "+218 91 226 4780"}</span>
             <span className="sm:hidden">📞</span>
           </div>
           <button
@@ -119,8 +120,8 @@ export default function Footer() {
         </div>
         {/* Show phone numbers on very small screens below */}
         <div className="flex items-center justify-between mt-2 sm:hidden text-[9px] text-white/50">
-          <span>🇹🇳 +216 24 339 166</span>
-          <span>🇱🇾 +218 91 226 4780</span>
+          <span dir="ltr">{c.phoneTunisia || "+216 24 339 166"}</span>
+          <span dir="ltr">{c.phoneLibya || "+218 91 226 4780"}</span>
         </div>
       </div>
     </footer>

@@ -38,12 +38,11 @@ const LOGO_MAP: Record<string, string> = {
   "CORTEM GROUP": "/cortem.png"
 };
 
-// Map products to their images
-const PRODUCT_IMAGE_MAP: Record<string, string> = {
-  "API-17J/API-15S Standard Non-Bonded Flexible Composite Pipe": "/partenaire1.png",
-  "SY/T 6662 Standard Steel Skeleton Reinforced Polyethylene Composite Pipe for Oil and Gas Industry": "/partenaire2.png",
-  "Turnkey Rehabilitation of oil and gas pipelines with 20 years service life guarantee": "/partenaire3.png",
-  "Our customized solutions allow you to safely distribute and control electricity in classified areas with risk of explosion.": "/partenaire4.png"
+// Map products to their images by partner name and product index
+const PRODUCT_IMAGE_MAP: Record<string, string[]> = {
+  "HIZEN": ["/partenaire1.png", "/partenaire2.png"],
+  "SIDC": ["/partenaire3.png"],
+  "CORTEM GROUP": ["/partenaire4.png"]
 };
 
 // -----------------------------------------------------------------------------
@@ -55,11 +54,14 @@ function getPartnersFromDict(lang: string): Partner[] {
     logo: LOGO_MAP[partner.name] || "/partenaire1.png",
     name: partner.name,
     isCortem: partner.name === "CORTEM GROUP",
-    products: partner.products.map((product) => ({
-      tagline: product.tagline,
-      description: product.description,
-      image: PRODUCT_IMAGE_MAP[product.tagline] || "/partenaire1.png"
-    }))
+    products: partner.products.map((product, index) => {
+      const images = PRODUCT_IMAGE_MAP[partner.name] || ["/partenaire1.png"];
+      return {
+        tagline: product.tagline,
+        description: product.description,
+        image: images[index] || "/partenaire1.png"
+      };
+    })
   }));
 }
 

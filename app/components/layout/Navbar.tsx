@@ -18,7 +18,7 @@ export default function Navbar() {
   const LANGUAGES: { code: "en" | "fr" | "ar"; label: string }[] = [
     { code: "en", label: "EN" },
     { code: "fr", label: "FR" },
-    { code: "ar", label: "ع" },
+    { code: "ar", label: "العربية" },
   ];
   const currentLang = LANGUAGES.find((l) => l.code === lang) ?? LANGUAGES[0];
 

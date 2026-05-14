@@ -123,7 +123,11 @@ export const dict = {
       cta: "Contact Now",
       headOffice: "Head Office",
       branchOffice: "Branch Office",
-      ourLocation: "Our Location"
+      ourLocation: "Our Location",
+      tunisia: "Tunisia",
+      libya: "Libya",
+      phoneTunisia: "+216 24 339 166",
+      phoneLibya: "+218 91 226 4780"
     },
     footer: {
       description: "Industrial maintenance solutions for the Oil & Gas sector.",
@@ -351,7 +355,11 @@ export const dict = {
       cta: "Contactez-Nous",
       headOffice: "Siège social",
       branchOffice: "Succursale",
-      ourLocation: "Notre localisation"
+      ourLocation: "Notre localisation",
+      tunisia: "Tunisie",
+      libya: "Libye",
+      phoneTunisia: "+216 24 339 166",
+      phoneLibya: "+218 91 226 4780"
     },
     footer: {
       description: "Solutions de maintenance industrielle pour le secteur pétrolier et gazier.",
@@ -579,7 +587,11 @@ export const dict = {
       cta: "اتصل الآن",
       headOffice: "المقر الرئيسي",
       branchOffice: "الفرع",
-      ourLocation: "موقعنا"
+      ourLocation: "موقعنا",
+      tunisia: "تونس",
+      libya: "ليبيا",
+      phoneTunisia: "+216 24 339 166",
+      phoneLibya: "+218 91 226 4780"
     },
     footer: {
       description: "حلول الصيانة الصناعية لقطاع النفط والغاز.",
@@ -680,7 +692,7 @@ export const dict = {
         "خدمات الأنابيب: إصلاح الأنابيب",
         "الأسطول والمعدات الدوارة",
         "المعدات المقاومة للانفجار",
-        "قاعدة الدعم اللوجستي"
+        "قاعدة الدعم اللوجستي للعمليات البحرية والبرية"
       ]
     }
   }
