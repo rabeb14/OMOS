@@ -7,11 +7,12 @@ import { dict } from "../../lib/dictionaries";
 import { useTheme } from "../providers/ThemeProvider";
 
 const spots = [
-  { id: 0, side: "left"  as const, dotX: 26, dotY: 28 }, //1
-  { id: 2, side: "left"  as const, dotX: 50, dotY: 60 }, //3
-  { id: 4, side: "right" as const, dotX: 20, dotY: 51 }, //5
+  { id: 0, side: "left"  as const, dotX: 36, dotY: 63 }, //1
   { id: 1, side: "right" as const, dotX: 46, dotY: 34 }, //2
+  { id: 2, side: "left"  as const, dotX: 50, dotY: 60 }, //3
   { id: 3, side: "right" as const, dotX: 72, dotY: 53 }, //4
+  { id: 4, side: "left" as const, dotX: 91, dotY: 51 }, //5
+  { id: 5, side: "right" as const, dotX: 42, dotY: 53 }, //6
 ];
 
 export default function HolisticMaintenance() {

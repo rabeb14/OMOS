@@ -129,30 +129,32 @@ export default function PartnersPage() {
                 onClick={() => setActivePartner(index)}
                 className={`relative flex items-center justify-center transition-all duration-300 ${
                   activePartner === index
-                    ? "scale-110 opacity-100"
+                    ? "scale-110"
                     : "opacity-70 hover:opacity-100 hover:scale-105"
                 }`}
               >
                 <div
-                  className={`relative ${
-                    partner.isCortem
-                      ? "w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 lg:w-44 lg:h-44"
-                      : "w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-40 lg:h-40"
+                  className={`relative p-3 rounded-2xl transition-all duration-300 ${
+                    activePartner === index
+                      ? "bg-white shadow-[0_8px_30px_rgba(47,128,237,0.3)] border-2 border-[#2F80ED]"
+                      : "bg-white/50 border-2 border-transparent"
                   }`}
                 >
-                  <Image
-                    src={partner.logo}
-                    alt={partner.name}
-                    fill
-                    className="object-contain"
-                  />
+                  <div
+                    className={`relative ${
+                      partner.isCortem
+                        ? "w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-36 lg:h-36"
+                        : "w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32"
+                    }`}
+                  >
+                    <Image
+                      src={partner.logo}
+                      alt={partner.name}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
                 </div>
-                {activePartner === index && (
-                  <motion.div
-                    layoutId="activeIndicator"
-                    className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-12 h-1 bg-[#2F80ED] rounded-full"
-                  />
-                )}
               </button>
             ))}
           </motion.div>

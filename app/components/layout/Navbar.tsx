@@ -40,6 +40,7 @@ export default function Navbar() {
     { name: d.hsse, href: "/hsse" },
     { name: d.partners, href: "/partners" },
     { name: d.references, href: "/references" },
+    { name: d.media, href: "/media" },
     { name: d.contact, href: "/contact" },
   ];
 
@@ -240,10 +241,10 @@ export default function Navbar() {
                   <button
                     key={l.code}
                     onClick={() => setLang(l.code)}
-                    className={`px-2 py-1 rounded-md text-xs font-bold transition-colors ${
+                    className={`px-3 py-1.5 rounded-md text-xs font-bold transition-all ${
                       lang === l.code
-                        ? "bg-white text-gray-900"
-                        : "text-white/70 hover:text-white"
+                        ? "bg-[#2F80ED] text-white shadow-lg shadow-[#2F80ED]/30"
+                        : "text-white/70 hover:text-white hover:bg-white/10"
                     }`}
                   >
                     {l.label}

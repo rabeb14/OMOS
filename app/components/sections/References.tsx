@@ -12,18 +12,17 @@ export default function References() {
 
   // Multi-image mapping for each service in the list
   const galleryData = [
-    { images: ["/pipe-rak.png"] }, // 01. pipe raks
+    {  images: ["/storage-tanks.png","/storagetanks2.png","/storagetanks3.png"] }, // 01. storage tanks
     { images: ["/integrity.png"] }, // 04. Pipeline Integrity
     { images: ["/a4.png"] }, // 05. Pipeline Cleaning
-    { images: ["/pigging.png","/pipeinspection.png"] }, // 06. Intelligent pigging
+    { images: ["/pigging.png"] }, // 06. Intelligent pigging
     { images: ["/a25.png"] }, // 07. Pipeline repair
-    // { images: [] }, // 07. Pipeline inspection
-    { images: ["/specialized.png"] }, // 02. Specialized Welding
-    { images: ["/storage-tanks.png"] }, // 03. storage tanks
+    { images: ["/pipe-rak.png"] }, // 02. pipe raks 
+    {images:  ["/specialized.png"]}, // 10. Logistics Support Base for Offshore and Onshore Operations
+    { images: ["/a17.png", "/a18.png", "/a19.png","/fleet4.png"] }, // 08. Fleet  maintenance
+    { images: ["/a20.png", "/a21.png"]},//Rotating equipment
+    { images: ["/logistics1.png", "/logistics2.png"] }, //logistic support 
     
-    { images: ["/a17.png", "/a18.png", "/a19.png", "/a20.png", "/a21.png", "/a22.png"] }, // 08. Fleet & Rotating equipment maintenance
-    // { images: ["/test11.png", "/test12.png"] }, // 09. Explosion-Proof
-    { images: ["/a14.png", "/a15.png", "/a16.png"] }, // 10. Logistics Support Base for Offshore and Onshore Operations
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -64,7 +63,7 @@ export default function References() {
               transition={{ duration: 0.8 }}
               className="w-[22%] shrink-0 flex flex-col justify-center gap-2 xl:gap-3"
             >
-              {d.serviceList.slice(0, 5).map((title, index) => (
+              {d.serviceList.slice(0, Math.ceil(d.serviceList.length / 2)).map((title, index) => (
                 <motion.button
                   key={index}
                   onClick={() => { setActiveIndex(index); setCurrentImgIndex(0); }}
@@ -138,7 +137,7 @@ export default function References() {
               )}
             </motion.div>
 
-            {/* Right categories (last 5) */}
+            {/* Right categories (remaining) */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -146,8 +145,8 @@ export default function References() {
               transition={{ duration: 0.8 }}
               className="w-[22%] shrink-0 flex flex-col justify-center gap-2 xl:gap-3"
             >
-              {d.serviceList.slice(5, 10).map((title, i) => {
-                const index = i + 5;
+              {d.serviceList.slice(Math.ceil(d.serviceList.length / 2)).map((title, i) => {
+                const index = i + Math.ceil(d.serviceList.length / 2);
                 return (
                   <motion.button
                     key={index}

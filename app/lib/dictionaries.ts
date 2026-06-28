@@ -1,3 +1,5 @@
+import { title } from "process";
+
 export type Lang = "en" | "fr" | "ar";
 
 export const dict = {
@@ -12,6 +14,7 @@ export const dict = {
       certificates: "Certificates",
       references: "References",
       photos: "Projects Photos",
+      media: "Media",
       contact: "Contact"
     },
     hero: {
@@ -65,7 +68,7 @@ export const dict = {
       excellenceDesc: "We deploy all our expertise and resources to complete tasks not only on time, but also in a cost-effective manner without compromising quality.",
       pillarsTitle: "Our Core Pillars",
       people: "People",
-      peopleDesc: "Our personnel are at the heart of our success. We recognize their immense value and are deeply committed to providing a supportive work environment, ongoing encouragement, and comprehensive personal development opportunities necessary to achieve our collective goals.",
+      peopleDesc: "Our teams are the driving force behind every success. Their expertise, discipline, and commitment allow us to deliver safe, reliable, and high‑quality solutions.",
       performance: "Performance",
       performanceDesc: "\"Getting it right the first time, every time\" is our mantra. We are passionate about safely delivering exceptional quality customer service. We embrace teamwork and collectively assume responsibility for delivering the highest standard of service possible.",
       partnerships: "Partnerships",
@@ -75,41 +78,58 @@ export const dict = {
       title: "Our Business",
       cards: [
         {
-          title: "General Maintenance",
-          desc: [
-            "Steel Structural Works: Design, fabrication, and erection of industrial steel structures and frameworks.",
-            "Surface Treatment & Protection: Sandblasting and Industrial Painting/Coating.",
-            "Specialized Welding & Fabrication: For production facilities, Gas & Oil Treatment Plants (GOSP), refineries, and export terminals.",
-            "Asset Integrity Management: Ensuring the structural soundness of all upstream and downstream installations."
-          ]
-        },
-        {
-          title: "Storage Tank Services",
-          desc: [
-            "Tank Construction & Maintenance: Design, assembly, and structural upkeep of storage tanks.",
-            "Refurbishment: Specialized repairs and upgrades according to international standards."
-          ]
-        },
-        {
+          // title: "General Maintenance",
           title: "Pipeline Services",
-          desc: [
-            "Pipeline Integrity: Comprehensive Cleaning, Inspection, and Repair services.",
-            "Pigging Operations: Mechanical cleaning and intelligent pigging for internal inspections.",
-            "Flow Assurance: Ensuring constant and safe transport of hydrocarbons."
+          // desc: [
+          //   "Steel Structural Works: Design, fabrication, and erection of industrial steel structures and frameworks.",
+          //   "Surface Treatment & Protection: Sandblasting and Industrial Painting/Coating.",
+          //   "Specialized Welding & Fabrication: For production facilities, Gas & Oil Treatment Plants (GOSP), refineries, and export terminals.",
+          //   "Asset Integrity Management: Ensuring the structural soundness of all upstream and downstream installations."
+          // ]
+           desc: [
+            // "Pipeline Integrity: Comprehensive Cleaning, Inspection, and Repair services.",
+            // "Pigging Operations: Mechanical cleaning and intelligent pigging for internal inspections.",
+            // "Flow Assurance: Ensuring constant and safe transport of hydrocarbons."
+            "Integrity management, Cleaning, intelligent pigging inspection, using MFL, UT, EMAT and Geometry technologies, and repair services."
           ]
         },
         {
-          title: "Fleet & Rotating Equipment",
+          title: "Storage Tanks",
           desc: [
-            "Fleet Management: Maintenance and lifecycle management for heavy and light vehicles.",
-            "Rotating Equipment Maintenance: Overhaul and repair of pumps, compressors, turbines, and electric motors."
+            "Construction, maintenance and refurbishment of fixed and floating roof storage tanks of all products."
           ]
         },
         {
-          title: "Explosion-Proof Equipment",
+          // title: "Pipeline Services",
+          title: "Flexible pipe",
           desc: [
-            "Hazardous Area Solutions: Supply, Installation, and Commissioning of Explosion-Proof (Ex) or Flameproof electrical equipment.",
-            "Compliance & Safety: Ensuring all systems meet ATEX / IECEx certifications for volatile environments."
+            // "Pipeline Integrity: Comprehensive Cleaning, Inspection, and Repair services.",
+            // "Pigging Operations: Mechanical cleaning and intelligent pigging for internal inspections.",
+            // "Flow Assurance: Ensuring constant and safe transport of hydrocarbons."
+           "Onshore & offshore flexible pipeline solutions with rapid installation and low maintenance cost advantages."
+          ]
+        },
+        {
+          // title: "Fleet & Rotating Equipment",
+          title: "Steel construction",
+          desc: [
+            // "Fleet Management: Maintenance and lifecycle management for heavy and light vehicles.",
+            // "Rotating Equipment Maintenance: Overhaul and repair of pumps, compressors, turbines, and electric motors."
+            "Steel fabrication, welding, sandblasting and protective coating services."
+          ]
+        },
+        {
+          title: "Logistics bases",
+          desc: [
+            // "Hazardous Area Solutions: Supply, Installation, and Commissioning of Explosion-Proof (Ex) or Flameproof electrical equipment.",
+            // "Compliance & Safety: Ensuring all systems meet ATEX / IECEx certifications for volatile environments."
+          "Facilities includes covered & uncovered space, workshops, test bays, offices and required handling equipment."
+          ]
+        },
+        {
+          title : "Procurement",
+          desc:[
+            "Supply of Ex equipment, instrumentation cables, modular-based sealing system and hazardous-area products."
           ]
         }
       ]
@@ -173,7 +193,7 @@ export const dict = {
           name: "CORTEM GROUP",
           products: [
             {
-              tagline: "Our customized solutions allow you to safely distribute and control electricity in classified areas with risk of explosion.",
+              tagline: "Solutions to safely distribute and control electricity in classified areas.",
               description: "The features of explosion-protected products, Explosion-protected products must not only be able to offer maximum reliability and high performance, but must also resist heat, cold, humidity, vibrations and shocks. Day after day, they must continue to operate with minimal maintenance requirements. The Oil & Gas industry is divided into several segments: onshore, offshore, transport and storage, gas and LNG processing."
             }
           ]
@@ -195,16 +215,17 @@ export const dict = {
         "General Maintenance": "General Maintenance"
       },
       serviceList: [
-        "Pipe raks",
+        "Storage tanks",
         "Pipeline Integrity",
         "Pipeline Cleaning",
         "Pipeline Intelligent pigging",
         "Pipeline repair",
+        "Pipe raks",
         "Specialized Welding & Fabrication",
-        "Storage tanks",
-        "Fleet & Rotating Equipment maintenance",
+        "Fleet maintenance",
+        "Rotating Equipment Maintenance ",
         // "Explosion-Proof Equipment",
-        "Logistics Support Base for Offshore and Onshore Operations"
+        "Logistics Support Base for Offshore & Onshore Operations"
       ]
     },
     hsse: {
@@ -231,6 +252,13 @@ export const dict = {
         "Explosion-Proof Equipment",
         "Logistics Support Base"
       ]
+    },
+    media: {
+      title: "Media Center",
+      subtitle: "Access our company brochure and marketing materials.",
+      downloadBrochure: "Download Our Brochure",
+      brochureDesc: "Learn more about OMOS International's services and capabilities.",
+      downloadButton: "Download PDF"
     }
   },
   fr: {
@@ -244,6 +272,7 @@ export const dict = {
       certificates: "Certificats",
       references: "Références",
       photos: "Galerie Photos",
+      media: "Média",
       contact: "Contact"
     },
     hero: {
@@ -463,6 +492,13 @@ export const dict = {
         "Équipement anti-explosion",
         "Base de soutien logistique"
       ]
+    },
+    media: {
+      title: "Centre Média",
+      subtitle: "Accédez à notre brochure et supports marketing.",
+      downloadBrochure: "Télécharger notre brochure",
+      brochureDesc: "En savoir plus sur les services et capacités d'OMOS International.",
+      downloadButton: "Télécharger PDF"
     }
   },
   ar: {
@@ -476,6 +512,7 @@ export const dict = {
       certificates: "الشهادات",
       references: "المراجع",
       photos: "صور المشاريع",
+      media: "الوسائط",
       contact: "اتصل بنا"
     },
     hero: {
@@ -694,6 +731,13 @@ export const dict = {
         "المعدات المقاومة للانفجار",
         "قاعدة الدعم اللوجستي للعمليات البحرية والبرية"
       ]
+    },
+    media: {
+      title: "مركز الوسائط",
+      subtitle: "الوصول إلى  كتيب الشركة والمواد التسويقية.",
+      downloadBrochure: "تحميل كتيبنا",
+      brochureDesc: "تعرف على المزيد عن خدمات وقدرات OMOS International.",
+      downloadButton: "تحميل PDF"
     }
   }
 } as const;

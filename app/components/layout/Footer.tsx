@@ -100,28 +100,34 @@ export default function Footer() {
       </div>
 
       {/* Mobile footer - compact single row */}
-      <div className="md:hidden px-3 sm:px-4 py-2 sm:py-2.5">
-        <div className="flex items-center justify-between gap-2">
-          <Link href="/" className="flex items-center gap-1.5">
-            <Image src="/logo1.png" alt="OMOS" width={24} height={24} className="object-contain" />
+      <div className="md:hidden px-4 py-4 bg-[#003554] border-t border-white/10">
+        <div className="flex items-center justify-between gap-3 mb-3">
+          <Link href="/" className="flex items-center gap-2">
+            <Image src="/logo1.png" alt="OMOS" width={28} height={28} className="object-contain" />
             <span className="text-white font-bold text-xs">OMOS</span>
           </Link>
-          <div className="flex items-center gap-2 sm:gap-3 text-[9px] sm:text-[10px] text-white/50">
-            <span className="hidden sm:inline" dir="ltr">{c.phoneTunisia || "+216 24 339 166"}</span>
-            <span className="hidden sm:inline" dir="ltr">{c.phoneLibya || "+218 91 226 4780"}</span>
-            <span className="sm:hidden">📞</span>
-          </div>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="text-[10px] text-white/30 hover:text-white/60 transition-colors"
+            className="w-8 h-8 flex items-center justify-center bg-white/10 rounded-full text-white/70 hover:bg-white/20 hover:text-white transition-all"
           >
             ↑
           </button>
         </div>
-        {/* Show phone numbers on very small screens below */}
-        <div className="flex items-center justify-between mt-2 sm:hidden text-[9px] text-white/50">
-          <span dir="ltr">{c.phoneTunisia || "+216 24 339 166"}</span>
-          <span dir="ltr">{c.phoneLibya || "+218 91 226 4780"}</span>
+        {/* Tunisia */}
+        <div className="flex items-center justify-between bg-white/5 rounded-lg p-2 mb-2">
+          <div className="flex flex-col">
+            <span className="text-[10px] text-white/50 font-medium">{c.tunisia || "Tunisia"}</span>
+            <span dir="ltr" className="text-[11px] text-white font-bold">{c.phoneTunisia || "+216 24 339 166"}</span>
+          </div>
+          <span className="text-white/30">📞</span>
+        </div>
+        {/* Libya */}
+        <div className="flex items-center justify-between bg-white/5 rounded-lg p-2">
+          <div className="flex flex-col">
+            <span className="text-[10px] text-white/50 font-medium">{c.libya || "Libya"}</span>
+            <span dir="ltr" className="text-[11px] text-white font-bold">{c.phoneLibya || "+218 91 226 4780"}</span>
+          </div>
+          <span className="text-white/30">📞</span>
         </div>
       </div>
     </footer>
