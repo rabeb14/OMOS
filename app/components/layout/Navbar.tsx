@@ -80,7 +80,7 @@ export default function Navbar() {
   <div className="flex items-center gap-1 bg-white/60 dark:bg-white/10 backdrop-blur-md rounded-full px-2 py-1.5 shadow-sm border border-white/40 dark:border-white/10">
 
     {/* LEFT → LOGO */}
-    <Link href="/" className="flex items-center px-2">
+    <Link href="/" className="flex items-center px-2" dir="ltr">
       <Image
         src="/logo1.png"
         alt="logo"

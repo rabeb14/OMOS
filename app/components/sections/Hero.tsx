@@ -35,7 +35,7 @@ export default function Hero() {
     <div className="relative z-10 w-full min-h-[420px] sm:min-h-[480px] md:min-h-[520px] flex flex-col px-4 sm:px-6 md:px-8 lg:px-9 xl:px-16 py-3 sm:py-4 md:py-6">
 
       {/* Top bar with logo */}
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between" dir="ltr">
         <Link href="/" className="flex items-center">
           <Image
             src="/logo1.png"

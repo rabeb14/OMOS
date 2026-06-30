@@ -100,36 +100,56 @@ export default function Footer() {
       </div>
 
       {/* Mobile footer - compact single row */}
-      <div className="md:hidden px-4 py-4 bg-[#003554] border-t border-white/10">
-        <div className="flex items-center justify-between gap-3 mb-3">
-          <Link href="/" className="flex items-center gap-2">
-            <Image src="/logo1.png" alt="OMOS" width={28} height={28} className="object-contain" />
-            <span className="text-white font-bold text-xs">OMOS</span>
-          </Link>
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="w-8 h-8 flex items-center justify-center bg-white/10 rounded-full text-white/70 hover:bg-white/20 hover:text-white transition-all"
-          >
-            ↑
-          </button>
-        </div>
-        {/* Tunisia */}
-        <div className="flex items-center justify-between bg-white/5 rounded-lg p-2 mb-2">
-          <div className="flex flex-col">
-            <span className="text-[10px] text-white/50 font-medium">{c.tunisia || "Tunisia"}</span>
-            <span dir="ltr" className="text-[11px] text-white font-bold">{c.phoneTunisia || "+216 24 339 166"}</span>
-          </div>
-          <span className="text-white/30">📞</span>
-        </div>
-        {/* Libya */}
-        <div className="flex items-center justify-between bg-white/5 rounded-lg p-2">
-          <div className="flex flex-col">
-            <span className="text-[10px] text-white/50 font-medium">{c.libya || "Libya"}</span>
-            <span dir="ltr" className="text-[11px] text-white font-bold">{c.phoneLibya || "+218 91 226 4780"}</span>
-          </div>
-          <span className="text-white/30">📞</span>
-        </div>
-      </div>
+      <div className="md:hidden bg-[#003554] border-t border-white/10 px-4 py-2">
+  {/* Header */}
+  <div className="flex items-center justify-between mb-2">
+    <Link href="/" className="flex items-center gap-2">
+      <Image
+        src="/logo1.png"
+        alt="OMOS"
+        width={24}
+        height={24}
+        className="object-contain"
+      />
+      <span className="text-white font-bold text-sm">OMOS</span>
+    </Link>
+
+    <button
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      className="w-7 h-7 flex items-center justify-center rounded-full bg-white/10 text-white/70 hover:bg-white/20 hover:text-white transition"
+    >
+      ↑
+    </button>
+  </div>
+
+  {/* Contacts */}
+  <div className="flex items-center justify-center bg-white/5 rounded-lg py-2 px-3 text-[11px]">
+
+    {/* Tunisia */}
+    <div className="flex items-center gap-1.5">
+      <span className="text-white/60 font-medium">
+        {c.tunisia || "Tunisia"}
+      </span>
+      <span className="text-white font-semibold" dir="ltr">
+        {c.phoneTunisia || "+216 24 339 166"}
+      </span>
+    </div>
+
+    {/* Divider */}
+    <div className="mx-3 h-4 w-px bg-white/20" />
+
+    {/* Libya */}
+    <div className="flex items-center gap-1.5">
+      <span className="text-white/60 font-medium">
+        {c.libya || "Libya"}
+      </span>
+      <span className="text-white font-semibold" dir="ltr">
+        {c.phoneLibya || "+218 91 226 4780"}
+      </span>
+    </div>
+
+  </div>
+</div>
     </footer>
   );
 }

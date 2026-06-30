@@ -86,7 +86,7 @@ export const dict = {
           //   "Specialized Welding & Fabrication: For production facilities, Gas & Oil Treatment Plants (GOSP), refineries, and export terminals.",
           //   "Asset Integrity Management: Ensuring the structural soundness of all upstream and downstream installations."
           // ]
-           desc: [
+          desc: [
             // "Pipeline Integrity: Comprehensive Cleaning, Inspection, and Repair services.",
             // "Pigging Operations: Mechanical cleaning and intelligent pigging for internal inspections.",
             // "Flow Assurance: Ensuring constant and safe transport of hydrocarbons."
@@ -106,7 +106,7 @@ export const dict = {
             // "Pipeline Integrity: Comprehensive Cleaning, Inspection, and Repair services.",
             // "Pigging Operations: Mechanical cleaning and intelligent pigging for internal inspections.",
             // "Flow Assurance: Ensuring constant and safe transport of hydrocarbons."
-           "Onshore & offshore flexible pipeline solutions with rapid installation and low maintenance cost advantages."
+            "Onshore & offshore flexible pipeline solutions with rapid installation and low maintenance cost advantages."
           ]
         },
         {
@@ -123,12 +123,12 @@ export const dict = {
           desc: [
             // "Hazardous Area Solutions: Supply, Installation, and Commissioning of Explosion-Proof (Ex) or Flameproof electrical equipment.",
             // "Compliance & Safety: Ensuring all systems meet ATEX / IECEx certifications for volatile environments."
-          "Facilities includes covered & uncovered space, workshops, test bays, offices and required handling equipment."
+            "Facilities includes covered & uncovered space, workshops, test bays, offices and required handling equipment."
           ]
         },
         {
-          title : "Procurement",
-          desc:[
+          title: "Procurement",
+          desc: [
             "Supply of Ex equipment, instrumentation cables, modular-based sealing system and hazardous-area products."
           ]
         }
@@ -336,41 +336,39 @@ export const dict = {
       title: "Nos Activités",
       cards: [
         {
-          title: "Maintenance Générale",
+          title: "Services liés aux conduites",
           desc: [
-            "Travaux de structures métalliques : Conception, fabrication et montage de structures et charpentes métalliques industrielles.",
-            "Traitement de surface et protection : Sablage et peinture/revêtement industriel.",
-            "Soudage et fabrication spécialisés : Pour les installations de production, les usines de traitement de gaz et pétrole (GOSP), les raffineries et les terminaux d'exportation.",
-            "Gestion de l'intégrité des actifs : Assurer la solidité structurelle de toutes les installations en amont et en aval."
+            "Gestion de l'intégrité, nettoyage, inspection par raclage intelligent, à l'aide des technologies MFL, UT, EMAT et de mesure géométrique, ainsi que services de réparation."
           ]
         },
         {
-          title: "Services de Réservoirs",
+          title: "Réservoirs de stockage",
           desc: [
-            "Construction et maintenance de réservoirs : Conception, assemblage et entretien structurel des réservoirs de stockage.",
-            "Remise en état : Réparations spécialisées et mises à niveau selon les normes internationales."
-          ]
+            "Construction, entretien et remise à neuf de réservoirs de stockage à toit fixe et à toit flottant pour tous types de produits."]
         },
         {
-          title: "Services de Pipelines",
+          title: "Conduites flexible",
           desc: [
-            "Intégrité des pipelines : Services complets de nettoyage, d'inspection et de réparation.",
-            "Opérations de raclage : Nettoyage mécanique et raclage intelligent pour les inspections internes.",
-            "Assurance de l'écoulement : Assurer le transport constant et sûr des hydrocarbures."
+            "Solutions de conduites flexibles pour les installations terrestres et offshore, offrant les avantages d'une installation rapide et de faibles coûts d'entretien."
           ]
         },
+
         {
-          title: "Flotte & Équipements",
+          title: "Construction métallique",
           desc: [
-            "Gestion de flotte : Maintenance et gestion du cycle de vie des véhicules lourds et légers.",
-            "Maintenance des équipements rotatifs : Révision et réparation de pompes, compresseurs, turbines et moteurs électriques."
-          ]
+            "Services de fabrication métallique, de soudure, de sablage et d'application de revêtements protecteurs."]
         },
+
         {
-          title: "Équipements Anti-Explosion",
+          title: "Bases logiques",
           desc: [
-            "Solutions pour zones dangereuses : Fourniture, installation et mise en service d'équipements électriques anti-déflagrants (Ex) ou ignifuges.",
-            "Conformité et sécurité : Garantir que tous les systèmes répondent aux certifications ATEX / IECEx pour les environnements volatils."
+            "Les installations comprennent des espaces couverts et à ciel ouvert, des ateliers, des baies d'essai, des bureaux et les équipements de manutention nécessaires."]
+        },
+
+        {
+          title: "Approvisionnement",
+          desc: [
+            "Fourniture d’équipements Ex, de câbles d’instrumentation, de systèmes d’étanchéité modulaires et de produits destinés aux zones dangereuses."
           ]
         }
       ]
@@ -456,15 +454,16 @@ export const dict = {
         "General Maintenance": "Maintenance générale"
       },
       serviceList: [
-        "Structure en acier",
-        "Soudure spécialisée",
         "Construction & Maintenance de réservoirs",
         "Intégrité des pipelines",
         "Nettoyage des pipelines",
         "Raclages intelligents",
         "Réparation des pipelines",
-        "Flotte & Équipements tournants",
-        "Équipement anti-explosion",
+        "Structure en acier",
+        "Soudure spécialisée",
+        "Maintenance de la flotte",
+        "Maintenance des équipements tournants",
+        // "Équipement anti-explosion",
         "Base de soutien logistique"
       ]
     },
@@ -479,17 +478,16 @@ export const dict = {
     photos: {
       title: "Galerie de Projets",
       items: [
-        "Structure en acier : Pipe Racks",
-        "Soudure spécialisée : Unité d'acide hélium",
-        "Réservoirs : Stockage d'acide sulfurique 5000 T",
-        "Réservoirs : Stockage d'eau chaude",
-        "Réservoirs : Stockage d'acide phosphorique",
-        "Pipelines : Intégrité",
-        "Pipelines : Nettoyage",
-        "Pipelines : Raclage intelligent",
-        "Pipelines : Réparation",
-        "Flotte & équipements tournants",
-        "Équipement anti-explosion",
+        "Construction & Maintenance de réservoirs",
+        "Intégrité des pipelines",
+        "Nettoyage des pipelines",
+        "Raclages intelligents",
+        "Réparation des pipelines",
+        "Structure en acier",
+        "Soudure spécialisée",
+        "Flotte",
+        "Équipements tournants",
+        // "Équipement anti-explosion",
         "Base de soutien logistique"
       ]
     },
@@ -528,13 +526,13 @@ export const dict = {
       statsProjects: "مشاريع منجزة",
       statsPartners: "شركاء عالميون",
       statsGoal: "الهدف: التميز",
-      p1: "تعود أصول مجموعتنا إلى عام 2017، عندما قرر السيد فتحي بن الحاج يحيى الاستفادة من خبرة تشغيلية تمتد على 25 عامًا في قطاع النفط والغاز لتأسيس شركته الخاصة. بعد أن أدار سابقًا عمليات لمزود خدمات معروف، بنى السيد بن الحاج يحيى مسيرة مهنية متميزة في الإشراف على الخدمات اللوجستية البرية والبحرية، ونقل منصات الحفر، وتوفير اليد العاملة، والأشغال المدنية المعقدة في البيئات الصحراوية والنائية. تشمل مسيرته المهنية تعاونات ناجحة مع كبرى الشركات الصناعية مثل British Gas و Pioneer و OMV و ENI و Lundin و PA Resources و Petro Celtic و Storm Ventures. وبشكل خاص، أتاحت له فترة عمله لمدة خمس سنوات كمدير فرع في ليبيا (2004-2009) في خدمة RWE و Total و Nippon فهمًا عميقًا لمعايير العمل الدولية والتحديات التشغيلية الإقليمية.",
+      p1: "تعود أصول مجموعتنا إلى عام 2017، عندما قرر السيد فتحي بن الحاج يحيى الاستفادة من خبرة تشغيلية تمتد على 25 عامًا في قطاع النفط والغاز لتأسيس شركته الخاصة. بعد أن أدار سابقًا عمليات لمزود خدمات معروف، بنى السيد بن الحاج يحيى مسيرة مهنية متميزة في الإشراف على الخدمات اللوجستية البرية والبحرية، ونقل منصات الحفر، وتوفير اليد العاملة، والأشغال المدنية المعقدة في البيئات الصحراوية والنائية. تشمل مسيرته المهنية تعاونات ناجحة مع كبرى الشركات البترولية مثل British Gas و Pioneer و OMV و ENI و Lundin و PA Resources و Petro Celtic و Storm Ventures. وبشكل خاص، أتاحت له فترة عمله لمدة خمس سنوات كمدير فرع في ليبيا (2004-2009) في خدمة RWE و Total و Nippon فهمًا عميقًا لمعايير العمل الدولية والتحديات التشغيلية الإقليمية.",
       p2: "في ديسمبر 2017، تجسدت هذه الرؤية بتأسيس ETPAK، شركة مكرسة لتقديم خدمات الأشغال المدنية عالية المستوى لقطاع النفط والغاز. شكل هذا التأسيس الخطوة الكبرى الأولى في إنشاء مجموعة قادرة على إدارة مشاريع البنية التحتية المعقدة في أكثر البيئات تطلبًا.",
       p3: "بناءً على هذا الزخم، تأسست OMOS في يونيو 2022 لتقديم خدمات صيانة صناعية متخصصة لقطاعات الطاقة والنفط والغاز. أُطلق هذا المشروع بالشراكة مع السيد سيف الدين بن الحاج يحيى، الذي عززت خبرته العميقة في أنشطة الصيانة القدرات التقنية للشركة بشكل أكبر. وبالنظر إلى عام 2026، تستعد OMOS لنمو دولي كبير مع افتتاح فرع مخصص في ليبيا، مدعومًا بزيادة استراتيجية في رأس المال ودمج مساهمين وشركاء جدد، السيد مكي زغدود.",
       p4: "لضمان تقديم حلول شاملة، أبرمت OMOS اتفاقيات تعاون استراتيجية مع شبكة من الشركاء ذوي السمعة الطيبة والموثوقين. تتيح لنا هذه التحالفات دمج خدمات متخصصة — بما في ذلك الهندسة والإنشاءات الفولاذية والسفع الرملي والطلاء والمناولة والنقل — في عروضنا الأساسية. من خلال توحيد أنشطة الصيانة الصناعية الأساسية هذه، نقدم لعملائنا مشاريع متكاملة تلبي أعلى معايير الكفاءة والموثوقية في أكثر البيئات تطلبًا.",
       milestone1: {
         date: "1992 - 2017",
-        title: "25 عامًا من التميز التشغيلي",
+        title: " ٢٥ عامًا من التميز التشغيلي ",
         desc: "25 عامًا من الخبرة التشغيلية (السيد فتحي بن الحاج يحيى) مع كبرى الشركات: British Gas و OMV و ENI و Total."
       },
       milestone2: {
@@ -576,41 +574,39 @@ export const dict = {
       title: "أنشطتنا",
       cards: [
         {
-          title: "الصيانة العامة",
-          desc: [
-            "أعمال الهياكل الفولاذية: تصميم وتصنيع وتركيب الهياكل والإطارات الفولاذية الصناعية.",
-            "معالجة وحماية الأسطح: السفع الرملي والطلاء/التغليف الصناعي.",
-            "اللحام والتصنيع المتخصص: لمرافق الإنتاج ومحطات معالجة الغاز والنفط (GOSP) والمصافي ومحطات التصدير.",
-            "إدارة سلامة الأصول: ضمان السلامة الإنشائية لجميع المنشآت الأمامية والخلفية."
-          ]
-        },
-        {
-          title: "خدمات خزانات التخزين",
-          desc: [
-            "بناء وصيانة الخزانات: تصميم وتجميع والصيانة الإنشائية لخزانات التخزين.",
-            "التجديد: إصلاحات وتحديثات متخصصة وفقًا للمعايير الدولية."
-          ]
-        },
-        {
           title: "خدمات الأنابيب",
           desc: [
-            "سلامة الأنابيب: خدمات شاملة للتنظيف والفحص والإصلاح.",
-            "عمليات الكشط: التنظيف الميكانيكي والكشط الذكي للفحوصات الداخلية.",
-            "ضمان التدفق: ضمان النقل الثابت والآمن للهيدروكربونات."
+            "إدارة سلامة الأصول، والتنظيف، وفحص الكشط الذكي باستخدام تقنيات MFL و UT و EMAT و Geometry، وخدمات الإصلاح."
           ]
         },
         {
-          title: "الأسطول والمعدات الدوارة",
+          title: "خزانات التخزين",
           desc: [
-            "إدارة الأسطول: الصيانة وإدارة دورة حياة المركبات الثقيلة والخفيفة.",
-            "صيانة المعدات الدوارة: إصلاح وصيانة المضخات والضواغط والتوربينات والمحركات الكهربائية."
+            "البناء والصيانة والتجديد لخزانات التخزين ذات الأسقف الثابتة والعائمة لجميع المنتجات."
           ]
         },
         {
-          title: "المعدات المقاومة للانفجار",
+          title: "الأنابيب المرنة",
           desc: [
-            "حلول المناطق الخطرة: توريد وتركيب وتشغيل المعدات الكهربائية المقاومة للانفجار (Ex) أو المقاومة للهب.",
-            "الامتثال والسلامة: ضمان أن جميع الأنظمة تستوفي شهادات ATEX / IECEx للبيئات المتقلبة."
+            "حلول الأنابيب المرنة البرية والبحرية مع مزايا التركيب السريع وتكلفة الصيانة المنخفضة."
+          ]
+        },
+        {
+          title: "البناء الفولاذي",
+          desc: [
+            "خدمات التصنيع الفولاذي، واللحام، والسفع الرملي، والتغليف الوقائي."
+          ]
+        },
+        {
+          title: "قواعد الدعم اللوجستي",
+          desc: [
+            "المرافق تشمل مساحات مغطاة وغير مغطاة، وورش عمل، ومحطات اختبار، ومكاتب، والمعدات اللازمة للمناولة."
+          ]
+        },
+        {
+          title: "الشراء",
+          desc: [
+            "توريد معدات Ex، وكابلات القياس، ونظام الختم المعياري، ومنتجات المناطق الخطرة."
           ]
         }
       ]
@@ -696,14 +692,16 @@ export const dict = {
         "General Maintenance": "الصيانة العامة"
       },
       serviceList: [
-        "حوامل الأنابيب",
+        "خزانات التخزين",
         "سلامة الأنابيب",
         "تنظيف الأنابيب",
         "الكشط الذكي للأنابيب",
         "إصلاح الأنابيب",
+        "حوامل الأنابيب",
         "اللحام والتصنيع المتخصص",
-        "خزانات التخزين",
-        "صيانة الأسطول والمعدات الدوارة",
+        "صيانة الأسطول",
+        "صيانة المعدات الدوارة",
+        // "معدات مقاومة للانفجار",
         "قاعدة الدعم اللوجستي للعمليات البحرية والبرية"
       ]
     },

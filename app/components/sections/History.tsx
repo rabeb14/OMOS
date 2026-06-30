@@ -153,7 +153,7 @@ export default function History() {
           transition={{ duration: 0.8 }}
           className="bg-white/80 dark:bg-white/5 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border border-white/60 dark:border-white/10"
         >
-          <div className="flex flex-col md:flex-row">
+          <div className="flex flex-col md:flex-row" dir="ltr">
             {/* Left — Image */}
             <div className="relative w-full md:w-[40%] aspect-[4/3] md:aspect-auto">
               <Image
